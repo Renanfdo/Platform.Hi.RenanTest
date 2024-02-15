@@ -64,3 +64,19 @@ terceiroResultado.ForEach(x =>
 Console.WriteLine(" ");
 Console.WriteLine("=================================================");
 Console.WriteLine(" ");
+
+Console.WriteLine("4. ");
+Console.WriteLine(@"A: Sim, para todos os casos que você queira interpretar/especificar o erro que está acontecendo, assim a origem da requisição pode tratar diferentes tipos de erros de acordo com a Exception recebida.");
+Console.WriteLine(@"B: Quando você quer corrigir ou tratar o erro que você espera, para que o usuário tenha uma boa experiencia com o sistema sem transparecer erros sistemáticos. Como exemplo exceções de 
+infraestrutura/integrações, quando realizado uma integração onde o sistema destino não responde, deveria existir um tratativa de contorno para este erro.");
+Console.WriteLine(@"C: Lançada exceção quando o método ou código esta recebendo dados que não são coerentes ou não esperados, evitando que tenha erros na execução. Além da tratativa de entrada de dados, teremos 
+exceção para regras de negócio, para funcionalidade que não devem seguir em frente por alguma regra de negócio. Assim que não retornar exceção, o código/método terá sua execução completa com sucesso.");
+
+Console.WriteLine(" ");
+Console.WriteLine("=================================================");
+Console.WriteLine(" ");
+
+Console.WriteLine("5. ");
+Console.WriteLine(@"Depende de cada situação e como esta sendo utilizado este web service, se as interfaces estão com injeção de Singleton, Transient ou Scoped. Para o EntityFrameWork você pode estar utilizando o 
+Tracking para bloqueio de registro, assim ficando bloqueado para sua sessão, assim que realizar o commit/saveChanges, o mesmo é liberado para outras sessões utilizar o registro. Em casos que não há tratativa, é 
+comun acontecer erro informando que o registro atual ou alterado por outro na requisição. Também nestes está faltando validação se a conta é existente ou não.");
