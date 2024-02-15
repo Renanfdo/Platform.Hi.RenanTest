@@ -51,8 +51,9 @@ Rua ruaC = new Rua { Cep = "78978-789", Nome = "Rua C" };
 List<Casa> listaCasas = new List<Casa>
 {
     new Casa { Rua = ruaA, Numero = 1, TotalEleitores = 123 },
-    new Casa { Rua = ruaB, Numero = 2, TotalEleitores = 456 },
-    new Casa { Rua = ruaC, Numero = 3, TotalEleitores = 143 }
+    new Casa { Rua = ruaA, Numero = 2, TotalEleitores = 123 },
+    new Casa { Rua = ruaB, Numero = 3, TotalEleitores = 456 },
+    new Casa { Rua = ruaC, Numero = 34, TotalEleitores = 143 }
 };
 
 var eleicaoService = host.Services.GetRequiredService<IEleicaoService>();
@@ -81,3 +82,37 @@ Console.WriteLine("5. ");
 Console.WriteLine(@"Depende de cada situação e como esta sendo utilizado este web service, se as interfaces estão com injeção de Singleton, Transient ou Scoped. Para o EntityFrameWork você pode estar utilizando o "
     +"Tracking para bloqueio de registro, assim ficando bloqueado para sua sessão, assim que realizar o commit/saveChanges, o mesmo é liberado para outras sessões utilizar o registro. Em casos que não há tratativa, é "
     +"comum acontecer erro informando que o registro atual ou alterado por outro na requisição. Também nestes está faltando validação se a conta é existente ou não.");
+
+Console.WriteLine(" ");
+Console.WriteLine("=================================================");
+Console.WriteLine(" ");
+
+Console.WriteLine("6. ");
+Console.WriteLine("Principais pontos:");
+Console.WriteLine("- Produto bem de LIMPEZA avaliado SUPERIOR 70%");
+Console.WriteLine("- ALIMENTO com 5 DIAS para VENCER");
+Console.WriteLine("- DESCONTO de 15% na SOMA");
+Console.WriteLine("Devolver:");
+Console.WriteLine("Nome do Produto de Limpeza, Nome do Alimento, Preço do Kit, Lucro do Kit, Data de validade do Kit");
+Console.WriteLine("Consulta:");
+Console.WriteLine(@"
+    SELECT pl.nome AS nome_produto_limpeza,
+           a.nome AS nome_alimento,
+           ((pl.volume * 0.85) + a.peso) AS preco_do_kit,
+           (((pl.volume * 0.85) + a.peso) - e.custo) AS lucro_do_kit,
+           CASE
+               WHEN pl.data_validade < a.data_validade THEN pl.data_validade
+               ELSE a.data_validade
+           END AS data_validade_do_kit
+      FROM Produto_Limpeza pl
+      JOIN Pesquisa_Mercado pm ON pl.id = pm.id_produto_limpeza
+      JOIN Elemento_Estoque e ON pl.id_elemento_estoque = e.id
+      JOIN (SELECT a.nome AS nome_alimento,
+                   a.data_validade
+              FROM Alimento a
+             WHERE a.data_validade > GETDATE() AND a.data_validade <= GETDATE() + 5) a ON 1=1
+      JOIN Elemento_Estoque e ON pl.id_elemento_estoque = e.id
+     WHERE pm.satisfacao > 70
+     ORDER BY 4 DESC
+"
+);
