@@ -92,6 +92,8 @@ Console.WriteLine("Principais pontos:");
 Console.WriteLine("- Produto bem de LIMPEZA avaliado SUPERIOR 70%");
 Console.WriteLine("- ALIMENTO com 5 DIAS para VENCER");
 Console.WriteLine("- DESCONTO de 15% na SOMA");
+Console.WriteLine("- ORDENAR pelo maior LUCRO");
+Console.WriteLine("- Não especificado alimento, pode ser qualquer um desde que ordene o mais lucrativo, então pode repetir o alimento com outro produto de limpeza");
 Console.WriteLine("Devolver:");
 Console.WriteLine("Nome do Produto de Limpeza, Nome do Alimento, Preço do Kit, Lucro do Kit, Data de validade do Kit");
 Console.WriteLine("Consulta:");
