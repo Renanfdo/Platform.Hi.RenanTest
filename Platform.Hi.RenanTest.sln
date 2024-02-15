@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Hi.RenanTest", "Platform.Hi.RenanTest\Platform.Hi.RenanTest.csproj", "{EC31CD43-9F77-4B2D-A13D-6D88BB7FE72E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B46241A2-CE08-43EF-B1CF-34194CBD532F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{7490BA38-7BDF-45DF-834F-0B6DC7E681F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiperMercado.Hi", "HiperMercado.Hi\HiperMercado.Hi.csproj", "{9AC4710A-4569-4FA1-AC63-F02FD96F9C16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Hi.RenanTest.SegundaQuestao", "Platform.Hi.RenanTest.SegundaQuestao\Platform.Hi.RenanTest.SegundaQuestao.csproj", "{2E5A5879-94C0-4C67-9D09-060DDF4F8862}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Hi.RenanTest.TerceiraQuestao", "Platform.Hi.RenanTest.TerceiraQuestao\Platform.Hi.RenanTest.TerceiraQuestao.csproj", "{32C3901D-A8DB-4FE4-9E74-218C3FB0744D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC31CD43-9F77-4B2D-A13D-6D88BB7FE72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC31CD43-9F77-4B2D-A13D-6D88BB7FE72E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC31CD43-9F77-4B2D-A13D-6D88BB7FE72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC31CD43-9F77-4B2D-A13D-6D88BB7FE72E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC4710A-4569-4FA1-AC63-F02FD96F9C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC4710A-4569-4FA1-AC63-F02FD96F9C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC4710A-4569-4FA1-AC63-F02FD96F9C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC4710A-4569-4FA1-AC63-F02FD96F9C16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E5A5879-94C0-4C67-9D09-060DDF4F8862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E5A5879-94C0-4C67-9D09-060DDF4F8862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E5A5879-94C0-4C67-9D09-060DDF4F8862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E5A5879-94C0-4C67-9D09-060DDF4F8862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32C3901D-A8DB-4FE4-9E74-218C3FB0744D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32C3901D-A8DB-4FE4-9E74-218C3FB0744D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32C3901D-A8DB-4FE4-9E74-218C3FB0744D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32C3901D-A8DB-4FE4-9E74-218C3FB0744D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9AC4710A-4569-4FA1-AC63-F02FD96F9C16} = {7490BA38-7BDF-45DF-834F-0B6DC7E681F8}
+		{2E5A5879-94C0-4C67-9D09-060DDF4F8862} = {B46241A2-CE08-43EF-B1CF-34194CBD532F}
+		{32C3901D-A8DB-4FE4-9E74-218C3FB0744D} = {B46241A2-CE08-43EF-B1CF-34194CBD532F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE357BB4-010F-4B51-9962-8CFF0CA61B7F}
+	EndGlobalSection
+EndGlobal
